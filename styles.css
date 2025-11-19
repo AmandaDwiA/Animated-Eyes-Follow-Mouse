@@ -1,0 +1,54 @@
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    margin: 0;
+    background-color: #162740;
+}
+
+/* Wajah (Lingkaran Kuning Besar) */
+.face {
+    position: relative;
+    width: 250px;
+    height: 200px;
+    background: #ffdb58; /* Warna Kuning */
+    border-radius: 50%;
+    border: 5px solid #333;
+    display: flex;
+    justify-content: center;
+    align-items: flex-start; /* Posisikan mata sedikit ke atas */
+    padding-top: 60px;
+}
+
+/* Kontainer Mata */
+.eyes {
+    display: flex;
+    gap: 40px; /* Jarak antara kedua mata */
+}
+
+/* Bagian Putih Mata (Sklera) */
+.eyeball {
+    position: relative;
+    width: 80px;
+    height: 80px;
+    background: white;
+    border-radius: 50%;
+    border: 3px solid #333;
+    overflow: hidden; /* Penting! Pupil harus tetap di dalam batas ini */
+}
+
+/* Pupil (Lingkaran Hitam) */
+.eye {
+    position: absolute;
+    top: 30%;
+    left: 50%;
+    width: 20px;
+    height: 20px;
+    background: black;
+    border-radius: 50%;
+    /* Atur titik rotasi pupil ke bagian tengah bawahnya, agar pupil terlihat bergeser */
+    transform-origin: 50% 150%; 
+    /* Posisikan pupil ke tengah awal */
+    transform: translate(-50%, -50%); 
+}
